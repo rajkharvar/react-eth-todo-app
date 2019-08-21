@@ -1,19 +1,5 @@
 [
     {
-        "constant": false,
-        "inputs": [
-            {
-                "name": "_todo",
-                "type": "string"
-            }
-        ],
-        "name": "addTodo",
-        "outputs": [],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
         "constant": true,
         "inputs": [
             {
@@ -30,6 +16,20 @@
         ],
         "payable": false,
         "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_todo",
+                "type": "string"
+            }
+        ],
+        "name": "addTodo",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
