@@ -24,7 +24,7 @@ class App extends React.Component {
   }
 
   // This loads blockchain network details
-  async componentWillMount() {
+  async loadBlockchainNetwork() {
     const web3 = new Web3(Web3.givenProvider || 'http://localhost:7545/');
     console.log(web3);
     const accounts = await web3.eth.getAccounts();
@@ -48,6 +48,7 @@ class App extends React.Component {
       .once('receipt', receipt => {
         console.log(receipt);
       });
+    this.forceUpdate();
   };
 
   render() {
