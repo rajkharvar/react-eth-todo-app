@@ -53,15 +53,32 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className='App'>
+      <div className='App' style={{ color: '#3C40C6' }}>
         <h2>Your account Id:{this.state.account}</h2>
         <h1>All Todos</h1>
         <form onSubmit={e => this.addTodo(this.state.todo, e)}>
           <input
             type='text'
+            placeholder='Enter todo'
+            style={{
+              border: '1px solid #3C40C6',
+              color: '#3C40C6',
+              height: '20px',
+              padding: '3px'
+            }}
             onChange={e => this.setState({ todo: e.target.value })}
           />
-          <button type='submit'>Add Todo</button>
+          <button
+            type='submit'
+            style={{
+              backgroundColor: '#3C40C6',
+              color: '#fff',
+              padding: '5px',
+              marginLeft: '20px'
+            }}
+          >
+            Add Todo
+          </button>
         </form>
         <TodoList allTodos={this.state.allTodos} />
       </div>
